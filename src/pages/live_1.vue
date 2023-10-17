@@ -1,17 +1,12 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import flvjs from 'flv.js'
 
-defineOptions({
-  name: 'IndexPage',
-})
-
-
 const videoPlayer = () => {
   if (flvjs.isSupported()) {
     const videoElement = document.getElementById('main_room');
     const flvPlayer = flvjs.createPlayer({
       type: 'flv',
-      url: 'https://pull.vio.vin/live/main.flv',
+      url: 'https://pull.vio.vin/live/live_1.flv',
     });
     flvPlayer.attachMediaElement(videoElement!);
     flvPlayer.load();
