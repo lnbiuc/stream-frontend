@@ -6,6 +6,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const UseDraggable: typeof import('./src/composables/drag')['UseDraggable']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -27,6 +28,10 @@ declare global {
   const customRef: typeof import('vue')['customRef']
   const debouncedRef: typeof import('@vueuse/core')['debouncedRef']
   const debouncedWatch: typeof import('@vueuse/core')['debouncedWatch']
+  const defaultDocument: typeof import('./src/composables/_configurable')['defaultDocument']
+  const defaultLocation: typeof import('./src/composables/_configurable')['defaultLocation']
+  const defaultNavigator: typeof import('./src/composables/_configurable')['defaultNavigator']
+  const defaultWindow: typeof import('./src/composables/_configurable')['defaultWindow']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
   const eagerComputed: typeof import('@vueuse/core')['eagerComputed']
@@ -293,6 +298,7 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly UseDraggable: UnwrapRef<typeof import('./src/composables/drag')['UseDraggable']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -314,6 +320,10 @@ declare module 'vue' {
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly debouncedRef: UnwrapRef<typeof import('@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('@vueuse/core')['debouncedWatch']>
+    readonly defaultDocument: UnwrapRef<typeof import('./src/composables/_configurable')['defaultDocument']>
+    readonly defaultLocation: UnwrapRef<typeof import('./src/composables/_configurable')['defaultLocation']>
+    readonly defaultNavigator: UnwrapRef<typeof import('./src/composables/_configurable')['defaultNavigator']>
+    readonly defaultWindow: UnwrapRef<typeof import('./src/composables/_configurable')['defaultWindow']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
@@ -574,6 +584,7 @@ declare module 'vue' {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly UseDraggable: UnwrapRef<typeof import('./src/composables/drag')['UseDraggable']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -595,6 +606,10 @@ declare module '@vue/runtime-core' {
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly debouncedRef: UnwrapRef<typeof import('@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('@vueuse/core')['debouncedWatch']>
+    readonly defaultDocument: UnwrapRef<typeof import('./src/composables/_configurable')['defaultDocument']>
+    readonly defaultLocation: UnwrapRef<typeof import('./src/composables/_configurable')['defaultLocation']>
+    readonly defaultNavigator: UnwrapRef<typeof import('./src/composables/_configurable')['defaultNavigator']>
+    readonly defaultWindow: UnwrapRef<typeof import('./src/composables/_configurable')['defaultWindow']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>

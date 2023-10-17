@@ -1,7 +1,7 @@
 <template>
   <div class="h-[50px] flex flex-col justify-center items-center m-4">
     <div class="flex">
-      <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/', 'bg-violet': $route.path === '/' }" @click="$router.push('/')">
+      <span class="mx-1 px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/', 'bg-violet': $route.path === '/' }" @click="$router.push('/')">
         主直播间
       </span>
       <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/live_1', 'bg-violet': $route.path === '/live_1' }" @click="$router.push('live_1')">
@@ -10,6 +10,14 @@
       <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/live_2', 'bg-violet': $route.path === '/live_2' }" @click="$router.push('live_2')">
         直播间2
       </span>
+      <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/live_3', 'bg-violet': $route.path === '/live_3' }" @click="$router.push('live_3')">
+        直播间3
+      </span>
+      <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/monitor', 'bg-violet': $route.path === '/monitor' }" @click="$router.push('monitor')">
+        监控室
+      </span>
     </div>
   </div>
 </template>
+<script setup lang="ts">
+</script>
