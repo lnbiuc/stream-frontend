@@ -2,21 +2,7 @@ import { computed, defineComponent, h, reactive, ref } from 'vue-demi'
 import type { UseDraggableOptions } from '@vueuse/core'
 import { isClient, useDraggable, useStorage } from '@vueuse/core'
 import { toValue } from '@vueuse/shared'
-
-export interface Position {
-    x: number
-    y: number
-}
-
-export interface RenderableComponent {
-    /**
-     * The element that the component should be rendered as
-     *
-     * @default 'div'
-     */
-    as?: Object | string
-}
-
+import type { Position, RenderableComponent } from '../types'
 
 export interface UseDraggableProps extends UseDraggableOptions, RenderableComponent {
     /**
@@ -50,6 +36,7 @@ export const UseDraggable = /* #__PURE__ */ defineComponent<UseDraggableProps>({
         'onEnd',
     ] as unknown as undefined,
     setup(props, { slots }) {
+        console.log(props.initialValue)
         const target = ref()
         const handle = computed(() => props.handle ?? target.value)
         const storageValue = props.storageKey && useStorage(
