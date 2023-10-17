@@ -8,7 +8,7 @@ defineOptions({
 
 const videoPlayer = () => {
   if (flvjs.isSupported()) {
-    const videoElement = document.getElementById('main_room');
+    const videoElement: HTMLVideoElement | null = document.getElementById('main_room') as HTMLVideoElement;
     const flvPlayer = flvjs.createPlayer({
       type: 'flv',
       url: 'https://pull.vio.vin/live/main.flv',

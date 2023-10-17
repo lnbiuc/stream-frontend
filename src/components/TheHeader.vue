@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[50px] flex flex-col justify-center items-center m-4">
+  <div class="h-[50px] flex flex-col justify-center items-center">
     <div class="flex">
       <span class="mx-1 px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/', 'bg-violet': $route.path === '/' }" @click="$router.push('/')">
         主直播间

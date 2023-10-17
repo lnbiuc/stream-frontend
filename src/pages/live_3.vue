@@ -1,9 +1,10 @@
 <script setup lang="ts" generic="T extends any, O extends any">
 import flvjs from 'flv.js'
-
+import {onMounted} from "vue";
 const videoPlayer = () => {
   if (flvjs.isSupported()) {
-    const videoElement = document.getElementById('main_room');
+    const videoElement: HTMLVideoElement | null = document.getElementById('live_3_room') as HTMLVideoElement;
+
     const flvPlayer = flvjs.createPlayer({
       type: 'flv',
       url: 'https://pull.vio.vin/live/live_3.flv',
@@ -25,7 +26,7 @@ onMounted(() => {
 <template>
   <div class="w-full flex flex-row justify-center items-center">
     <div class="w-[85vw] h-full flex justify-center items-center">
-      <video style="width: 100%;" id="main_room" controls autoplay autofocus :volume="0.3"/>
+      <video style="width: 100%;" id="live_3_room" controls autoplay autofocus :volume="0.3"/>
     </div>
   </div>
 </template>
