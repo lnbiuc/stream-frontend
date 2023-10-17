@@ -298,7 +298,6 @@ import { UnwrapRef } from 'vue'
 declare module 'vue' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly UseDraggable: UnwrapRef<typeof import('./src/composables/drag')['UseDraggable']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -320,10 +319,6 @@ declare module 'vue' {
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly debouncedRef: UnwrapRef<typeof import('@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('@vueuse/core')['debouncedWatch']>
-    readonly defaultDocument: UnwrapRef<typeof import('./src/composables/_configurable')['defaultDocument']>
-    readonly defaultLocation: UnwrapRef<typeof import('./src/composables/_configurable')['defaultLocation']>
-    readonly defaultNavigator: UnwrapRef<typeof import('./src/composables/_configurable')['defaultNavigator']>
-    readonly defaultWindow: UnwrapRef<typeof import('./src/composables/_configurable')['defaultWindow']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
@@ -584,7 +579,6 @@ declare module 'vue' {
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
-    readonly UseDraggable: UnwrapRef<typeof import('./src/composables/drag')['UseDraggable']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -606,10 +600,6 @@ declare module '@vue/runtime-core' {
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
     readonly debouncedRef: UnwrapRef<typeof import('@vueuse/core')['debouncedRef']>
     readonly debouncedWatch: UnwrapRef<typeof import('@vueuse/core')['debouncedWatch']>
-    readonly defaultDocument: UnwrapRef<typeof import('./src/composables/_configurable')['defaultDocument']>
-    readonly defaultLocation: UnwrapRef<typeof import('./src/composables/_configurable')['defaultLocation']>
-    readonly defaultNavigator: UnwrapRef<typeof import('./src/composables/_configurable')['defaultNavigator']>
-    readonly defaultWindow: UnwrapRef<typeof import('./src/composables/_configurable')['defaultWindow']>
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>

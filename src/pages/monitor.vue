@@ -143,7 +143,7 @@ const openLiveWindow = (index:number) => {
           <div>
             主直播间
           </div>
-          <div>
+          <div class="cursor-pointer" @click="defaultPosition.main.isOpen = !defaultPosition.main.isOpen">
             关闭
           </div>
         </div>
@@ -175,7 +175,7 @@ const openLiveWindow = (index:number) => {
           <div>
             直播间1
           </div>
-          <div>
+          <div class="cursor-pointer" @click="defaultPosition.live_1.isOpen = !defaultPosition.live_1.isOpen">
             关闭
           </div>
         </div>
@@ -207,7 +207,7 @@ const openLiveWindow = (index:number) => {
           <div>
             直播间2
           </div>
-          <div>
+          <div class="cursor-pointer" @click="defaultPosition.live_2.isOpen = !defaultPosition.live_2.isOpen">
             关闭
           </div>
         </div>
@@ -239,7 +239,7 @@ const openLiveWindow = (index:number) => {
           <div>
             直播间3
           </div>
-          <div>
+          <div class="cursor-pointer" @click="defaultPosition.live_3.isOpen = !defaultPosition.live_3.isOpen">
             关闭
           </div>
         </div>
