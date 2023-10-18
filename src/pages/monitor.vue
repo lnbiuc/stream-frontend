@@ -15,44 +15,52 @@ const innerHeight = isClient ? window.innerHeight : 200
 const videoPlayer = () => {
   if (flvjs.isSupported()) {
     // main
-    const videoElement_Main: HTMLVideoElement | null = document.getElementById('main_room') as HTMLVideoElement;
-    const flvPlayer_main = flvjs.createPlayer({
-      type: 'flv',
-      url: 'https://pull.vio.vin/live/main.flv',
-    });
-    flvPlayer_main.attachMediaElement(videoElement_Main);
-    flvPlayer_main.load();
-    flvPlayer_main.play();
+    if (defaultPosition.value.main.isOpen) {
+      const videoElement_Main: HTMLVideoElement | null = document.getElementById('main_room') as HTMLVideoElement;
+      const flvPlayer_main = flvjs.createPlayer({
+        type: 'flv',
+        url: 'https://pull.vio.vin/live/main.flv',
+      });
+      flvPlayer_main.attachMediaElement(videoElement_Main);
+      flvPlayer_main.load();
+      flvPlayer_main.play();
+    }
 
     // live_1
-    const videoElement_live_1: HTMLVideoElement | null = document.getElementById('live_1_room') as HTMLVideoElement;
-    const flvPlayer_live_1 = flvjs.createPlayer({
-      type: 'flv',
-      url: 'https://pull.vio.vin/live/live_1.flv',
-    });
-    flvPlayer_live_1.attachMediaElement(videoElement_live_1);
-    flvPlayer_live_1.load();
-    flvPlayer_live_1.play();
+    if (defaultPosition.value.live_1.isOpen) {
+      const videoElement_live_1: HTMLVideoElement | null = document.getElementById('live_1_room') as HTMLVideoElement;
+      const flvPlayer_live_1 = flvjs.createPlayer({
+        type: 'flv',
+        url: 'https://pull.vio.vin/live/live_1.flv',
+      });
+      flvPlayer_live_1.attachMediaElement(videoElement_live_1);
+      flvPlayer_live_1.load();
+      flvPlayer_live_1.play();
+    }
 
     // live_2
-    const videoElement_live_2: HTMLVideoElement | null = document.getElementById('live_2_room') as HTMLVideoElement;
-    const flvPlayer_live_2 = flvjs.createPlayer({
-      type: 'flv',
-      url: 'https://pull.vio.vin/live/live_2.flv',
-    });
-    flvPlayer_live_2.attachMediaElement(videoElement_live_2);
-    flvPlayer_live_2.load();
-    flvPlayer_live_2.play();
+    if (defaultPosition.value.live_2.isOpen) {
+      const videoElement_live_2: HTMLVideoElement | null = document.getElementById('live_2_room') as HTMLVideoElement;
+      const flvPlayer_live_2 = flvjs.createPlayer({
+        type: 'flv',
+        url: 'https://pull.vio.vin/live/live_2.flv',
+      });
+      flvPlayer_live_2.attachMediaElement(videoElement_live_2);
+      flvPlayer_live_2.load();
+      flvPlayer_live_2.play();
+    }
 
     // live_3
-    const videoElement_live_3: HTMLVideoElement | null = document.getElementById('live_3_room') as HTMLVideoElement;
-    const flvPlayer_live_3 = flvjs.createPlayer({
-      type: 'flv',
-      url: 'https://pull.vio.vin/live/live_3.flv',
-    });
-    flvPlayer_live_3.attachMediaElement(videoElement_live_3);
-    flvPlayer_live_3.load();
-    flvPlayer_live_3.play();
+    if (defaultPosition.value.live_3.isOpen) {
+      const videoElement_live_3: HTMLVideoElement | null = document.getElementById('live_3_room') as HTMLVideoElement;
+      const flvPlayer_live_3 = flvjs.createPlayer({
+        type: 'flv',
+        url: 'https://pull.vio.vin/live/live_3.flv',
+      });
+      flvPlayer_live_3.attachMediaElement(videoElement_live_3);
+      flvPlayer_live_3.load();
+      flvPlayer_live_3.play();
+    }
 
   } else {
     alert('你的浏览器不支持播放，请更换浏览器')
@@ -113,6 +121,7 @@ const openLiveWindow = (index:number) => {
       defaultPosition.value.live_3.isOpen = !defaultPosition.value.live_3.isOpen
       break
   }
+  videoPlayer()
 }
 </script>
 
