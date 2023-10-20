@@ -146,14 +146,14 @@ const openLiveWindow = (index:number) => {
     >
       <div :style="{width: defaultPosition.main.width + 'px'}">
         <div ref="handle_main" class="cursor-move mb-2 flex flex-row justify-between">
-          <div>
-            点击标题以拖动
+          <div style="transform: scale(1.2)">
+            🏠
           </div>
           <div>
             主直播间
           </div>
-          <div class="cursor-pointer" @click="defaultPosition.main.isOpen = !defaultPosition.main.isOpen">
-            关闭
+          <div class="cursor-pointer overflow-hidden flex flex-col justify-center" @click="defaultPosition.main.isOpen = !defaultPosition.main.isOpen">
+            <a class="i-carbon-close icon-btn mr-1" style="transform: scale(1.7)"/>
           </div>
         </div>
         <div class="text-xs">
@@ -178,14 +178,14 @@ const openLiveWindow = (index:number) => {
     >
       <div :style="{width: defaultPosition.main.width + 'px'}">
         <div ref="handle_live_1" class="cursor-move mb-2 flex flex-row justify-between">
-          <div>
-            点击标题以拖动
+          <div style="transform: scale(1.2)">
+            🎞
           </div>
           <div>
             直播间1
           </div>
-          <div class="cursor-pointer" @click="defaultPosition.live_1.isOpen = !defaultPosition.live_1.isOpen">
-            关闭
+          <div class="cursor-pointer overflow-hidden flex flex-col justify-center" @click="defaultPosition.live_1.isOpen = !defaultPosition.live_1.isOpen">
+            <a class="i-carbon-close icon-btn mr-1" style="transform: scale(1.7)"/>
           </div>
         </div>
         <div class="text-xs">
@@ -210,14 +210,14 @@ const openLiveWindow = (index:number) => {
     >
       <div :style="{width: defaultPosition.main.width + 'px'}">
         <div ref="handle_live_2" class="cursor-move mb-2 flex flex-row justify-between">
-          <div>
-            点击标题以拖动
+          <div style="transform: scale(1.2)">
+            🎞
           </div>
           <div>
             直播间2
           </div>
-          <div class="cursor-pointer" @click="defaultPosition.live_2.isOpen = !defaultPosition.live_2.isOpen">
-            关闭
+          <div class="cursor-pointer overflow-hidden flex flex-col justify-center" @click="defaultPosition.live_2.isOpen = !defaultPosition.live_2.isOpen">
+            <a class="i-carbon-close icon-btn mr-1" style="transform: scale(1.7)"/>
           </div>
         </div>
         <div class="text-xs">
@@ -242,14 +242,14 @@ const openLiveWindow = (index:number) => {
     >
       <div :style="{width: defaultPosition.main.width + 'px'}">
         <div ref="handle_live_3" class="cursor-move mb-2 flex flex-row justify-between">
-          <div>
-            点击标题以拖动
+          <div style="transform: scale(1.2)">
+            🎞
           </div>
           <div>
             直播间3
           </div>
-          <div class="cursor-pointer" @click="defaultPosition.live_3.isOpen = !defaultPosition.live_3.isOpen">
-            关闭
+          <div class="cursor-pointer overflow-hidden flex flex-col justify-center" @click="defaultPosition.live_3.isOpen = !defaultPosition.live_3.isOpen">
+            <a class="i-carbon-close icon-btn mr-1" style="transform: scale(1.7)"/>
           </div>
         </div>
         <div class="text-xs">

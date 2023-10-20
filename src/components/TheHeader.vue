@@ -1,5 +1,7 @@
 <template>
-  <div class="h-[50px] flex flex-col justify-center items-center">
+  <div class="h-[50px] flex flex-row justify-between items-center">
+    <div>
+    </div>
     <div class="flex">
       <span class="mx-1 px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/', 'bg-violet': $route.path === '/' }" @click="$router.push('/')">
         主直播间
@@ -16,6 +18,12 @@
       <span class="px-2 py-1 cursor-pointer border-rd" :class="{ 'hover:bg-violet': $route.path === '/monitor', 'bg-violet': $route.path === '/monitor' }" @click="$router.push('monitor')">
         监控室
       </span>
+    </div>
+    <div class="flex flex-row justify-center items-center">
+      <a class="px-2 py-1 cursor-pointer border-rd hover:bg-violet" target="_blank" href="https://drive.vio.vin/">直播录像</a>
+      <button @click="toggleDark()" class="m-4 icon-btn">
+        <div class="i-carbon-sun dark:i-carbon-moon" />
+      </button>
     </div>
   </div>
 </template>
