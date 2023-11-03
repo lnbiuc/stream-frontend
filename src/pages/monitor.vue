@@ -157,7 +157,7 @@ const openLiveWindow = (index:number) => {
           </div>
         </div>
         <div class="text-xs">
-          <video style="width: 100%;" id="main_room" controls autoplay :volume="0.5"/>
+          <video style="width: 100%;" id="main_room" controls autoplay :volume="0"/>
         </div>
       </div>
     </Draggable>
