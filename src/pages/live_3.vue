@@ -1,24 +1,7 @@
 <script setup lang="ts" generic="T extends any, O extends any">
-import flvjs from 'flv.js'
-import {onMounted} from "vue";
-const videoPlayer = () => {
-  if (flvjs.isSupported()) {
-    const videoElement: HTMLVideoElement | null = document.getElementById('live_3_room') as HTMLVideoElement;
-
-    const flvPlayer = flvjs.createPlayer({
-      type: 'flv',
-      url: 'https://pull.vio.vin/live/live_3.flv',
-    });
-    flvPlayer.attachMediaElement(videoElement!);
-    flvPlayer.load();
-    flvPlayer.play();
-  } else {
-    alert('你的浏览器不支持播放，请更换浏览器')
-  }
-}
 
 onMounted(() => {
-  videoPlayer()
+  videoPlayer('https://pull.vio.vin/live/live_3.flv', 'live_3_room')
 })
 
 </script>
