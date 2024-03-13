@@ -18,9 +18,6 @@
       <span class="cursor-pointer border-rd px-2 py-1" :class="{ 'hover:bg-violet': $route.path === '/live_3', 'bg-violet': $route.path === '/live_3' }" @click="$router.push('live_3')">
         直播间3
       </span>
-      <span class="cursor-pointer border-rd px-2 py-1" :class="{ 'hover:bg-violet': $route.path === '/live_4', 'bg-violet': $route.path === '/live_4' }" @click="$router.push('live_4')">
-        直播间4
-      </span>
       <span class="cursor-pointer border-rd px-2 py-1" :class="{ 'hover:bg-violet': $route.path === '/monitor', 'bg-violet': $route.path === '/monitor' }" @click="$router.push('monitor')">
         监控室
       </span>
